@@ -16,6 +16,10 @@ const RandomMessage: React.FC = () => {
     return <p>{message}</p>;
 };
 
+export const metadata = {
+    title: 'Not found',
+};
+
 const Page = () => {
     return (
         <main className={styles.main}>

@@ -1,6 +1,15 @@
 
+export const metadata = {
+    title: 'About',
+};
+
 const Page = () => {
-    return <div>About</div>;
+    return (
+    <main>
+        About
+    </main>
+
+    );
 };
 
 export default Page;
