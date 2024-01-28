@@ -9,18 +9,45 @@ body {
 
   h1,
   h2,
-  a,
+  h3,
   p,
+  a,
   span {
     letter-spacing: .1em;
     color: var(--text-color);
   }
 
+  @media screen and (max-width: 764px) {
+
+    h1,
+    h2 {
+      font-size: 1.5em;
+    }
+
+    p,
+    a,
+    span {
+      font-size: .8em;
+    }
+  }
+  h2{
+    font-size: 2rem;
+  }
+  h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  p {
+    font-weight: 500;
+  }
+
   a {
     letter-spacing: .15em;
     font-weight: 500;
+    text-decoration: none;
     transition: color .5s;
-
+    color: var(--link-color);
     &:hover {
       color: var(--main-color);
     }
@@ -31,9 +58,11 @@ body {
       min-width: 765px;
       width: 50%;
     }
+
     min-height: 85vh;
     margin: auto;
-    section{
+
+    section {
       margin: 3em 1em;
     }
   }
