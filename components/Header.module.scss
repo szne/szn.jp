@@ -4,29 +4,39 @@
             min-width: 1024px;
             width: 50%;
         }
+
         margin: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 1.2em 1em;
 
-        .icon_s {
-            width: 2.5em;
-            height: 2.5em;
+        svg {
+            width: 2em;
+            height: 2em;
             cursor: pointer;
-            /* リンクとして認識させるため */
+            fill: var(--text-color);
+            transition: fill .3s;
+            stroke-width: 0px;
+            &:hover{
+                fill: var(--main-color);
+            }
         }
+
 
         ul {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             li {
                 display: inline-block;
                 padding: 10px 20px;
+
                 @media screen and (max-width: 1023px) {
                     padding: 10px .6em;
                 }
+
                 a {
                     text-decoration: none;
                 }
