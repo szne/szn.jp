@@ -1,0 +1,18 @@
+@import '/src/root.scss';
+@import '/src/reset.css';
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  
+  a {
+    color: var(--text-color);
+    letter-spacing: .15em;
+    font-weight: 500;
+    transition: color .5s;
+    &:hover {
+      color: var(--main-color);
+    }
+  }
+}

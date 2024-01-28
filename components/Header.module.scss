@@ -1,0 +1,36 @@
+.header {
+    nav {
+        @media screen and (min-width: 1024px) {
+            min-width: 1024px;
+            width: 50%;
+        }
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em;
+
+        .icon_s {
+            width: 3em;
+            height: 3em;
+            cursor: pointer;
+            /* リンクとして認識させるため */
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            li {
+                display: inline-block;
+                padding: 10px 20px;
+                @media screen and (max-width: 1023px) {
+                    padding: 10px .6em;
+                }
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
