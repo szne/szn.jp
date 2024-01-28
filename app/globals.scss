@@ -4,10 +4,12 @@
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
+  transition: color .3s, background-color .3s;
   margin: 0;
-  
-  a {
+  a, p, span{
     color: var(--text-color);
+  }
+  a {
     letter-spacing: .15em;
     font-weight: 500;
     transition: color .5s;
