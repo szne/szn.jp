@@ -14,4 +14,11 @@
     h1 {
         border-right: 2px solid var(--main-color);
     }
+    @media screen and (max-width: 764px) {
+        flex-direction: column;
+        h1 {
+            border-right: 0px solid var(--main-color);
+            border-bottom: 2px solid var(--main-color);;
+        }
+    }
 }
