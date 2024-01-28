@@ -1,0 +1,13 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .copyright{
+        text-align: center;
+        padding: 10px;
+        span{
+            font-size: .8em;
+            letter-spacing: .3em;
+        }
+    }
+}
