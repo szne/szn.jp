@@ -6,15 +6,32 @@ body {
   color: var(--text-color);
   transition: color .3s, background-color .3s;
   margin: 0;
-  a, p, span{
+
+  h1,
+  h2,
+  a,
+  p,
+  span {
+    letter-spacing: .1em;
     color: var(--text-color);
   }
+
   a {
     letter-spacing: .15em;
     font-weight: 500;
     transition: color .5s;
+
     &:hover {
       color: var(--main-color);
     }
+  }
+
+  main {
+    @media screen and (min-width: 1024px) {
+      min-width: 1024px;
+      width: 50%;
+    }
+
+    margin: auto;
   }
 }

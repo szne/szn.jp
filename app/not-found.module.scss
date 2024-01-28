@@ -1,0 +1,17 @@
+.msg {
+    padding: 2em;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1,
+    p {
+        display: block;
+        padding: 30px;
+    }
+
+    h1 {
+        border-right: 2px solid var(--main-color);
+    }
+}

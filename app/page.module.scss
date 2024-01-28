@@ -1,0 +1,36 @@
+.main {
+    // margin: auto;
+
+    // @media screen and (min-width: 1024px) {
+    //     min-width: 1024px;
+    //     width: 50%;
+    // }
+}
+
+.logo {
+    padding: 5em 0;
+    display: flex;
+    height: 80vh;
+
+    //background-color: var(--main-color);
+    svg {
+        height: 5em;
+        width: auto;
+        margin: auto;
+        fill: none;
+        stroke: var(--main-color);
+        stroke-width: 36px;
+        stroke-dasharray: 5882;
+        stroke-dashoffset: 0;
+        -webkit-animation: hello 4s cubic-bezier(0.310, 0.005, 0.000, 1.000);;
+        animation: hello 6s cubic-bezier(0.310, 0.005, 0.000, 1.000);;
+    }
+    @keyframes hello {
+        0% {
+          stroke-dashoffset: 5882;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+}
