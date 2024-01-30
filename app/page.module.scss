@@ -6,7 +6,6 @@
   max-width: 65%;
   margin: auto;
 
-  //background-color: var(--main-color);
   svg {
     height: 5.5em;
     width: auto;
@@ -14,14 +13,13 @@
     fill: none;
     stroke: var(--main-color);
     stroke-width: 36px;
-    stroke-dasharray: 5882;
-    stroke-dashoffset: 0;
+    stroke-dasharray: 5920;
     -webkit-animation: hello 5s cubic-bezier(0.310, 0.005, 0.000, 1.000);
     animation: hello 5s cubic-bezier(0.310, 0.005, 0.000, 1.000);
 
     @keyframes hello {
       0% {
-        stroke-dashoffset: 5882;
+        stroke-dashoffset: 5920;
       }
 
       100% {
@@ -120,7 +118,6 @@
       a {
         margin-bottom: 0;
         height: 1.7rem;
-
         svg {
           height: 1.5rem;
           width: 3.5rem;
@@ -146,9 +143,11 @@
     div {
       grid-column: 2 / 12;
       margin-top: 3em;
+
       .name {
         a {
           height: 1.4rem;
+
           svg {
             height: 1rem;
             width: 2rem;
@@ -158,3 +157,5 @@
     }
   }
 }
+
+
