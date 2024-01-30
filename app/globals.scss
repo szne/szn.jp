@@ -4,9 +4,11 @@
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
+  font-family: var(--body-font);
   transition: color .3s, background-color .3s;
   margin: 0;
 
+  // 文字全般
   h1,
   h2,
   h3,
@@ -15,6 +17,40 @@ body {
   span {
     letter-spacing: .1em;
     color: var(--text-color);
+  }
+
+  // 見出し
+  h1,
+  h2 {
+    font-family: var(--display-font);
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  // 本文
+
+  p {
+    font-weight: 500;
+  }
+
+  a {
+    letter-spacing: .15em;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color .5s;
+    color: var(--link-color);
+
+    &:hover {
+      color: var(--main-color);
+    }
   }
 
   @media screen and (max-width: 764px) {
@@ -31,36 +67,15 @@ body {
       font-size: .8em;
     }
   }
-  h2{
-    font-size: 2rem;
-  }
-  h3{
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
 
-  p {
-    font-weight: 500;
-  }
-
-  a {
-    letter-spacing: .15em;
-    font-weight: 700;
-    text-decoration: none;
-    transition: color .5s;
-    color: var(--link-color);
-    &:hover {
-      color: var(--main-color);
-    }
-  }
-
-  .linkarrow{
-    &::after{
+  .linkarrow {
+    &::after {
       margin-left: .4em;
       transition: margin-left .3s ease-in-out;
       content: "→";
     }
-    &:hover::after{
+
+    &:hover::after {
       margin-left: .5em;
     }
   }

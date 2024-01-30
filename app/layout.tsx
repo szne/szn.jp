@@ -1,13 +1,9 @@
-import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
+import "../components/reset.css"
+import "./globals.scss"
 
-import "../src/reset.css";
-import "./globals.scss";
-
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-
-const noto = Noto_Sans_JP({ subsets: ["latin"] });
+import {body_font, display_font} from '../components/fonts'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 export const metadata = {
   title: {
@@ -23,9 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="jp">
-      <body className={noto.className}>
+      <body className={`${body_font.variable} ${display_font.variable}`}>
         <Header />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
