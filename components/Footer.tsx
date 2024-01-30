@@ -1,4 +1,3 @@
-import "../src/root.scss";
 import styles from "./Footer.module.scss";
 
 const Header = () => {

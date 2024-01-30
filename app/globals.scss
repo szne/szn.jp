@@ -1,5 +1,5 @@
-@import '/src/root.scss';
-@import '/src/reset.css';
+@import '/components/root.scss';
+@import '/components/reset.css';
 
 body {
   background-color: var(--bg-color);
@@ -27,6 +27,7 @@ body {
     p,
     a,
     span {
+      line-break: strict;
       font-size: .8em;
     }
   }
@@ -44,12 +45,23 @@ body {
 
   a {
     letter-spacing: .15em;
-    font-weight: 500;
+    font-weight: 700;
     text-decoration: none;
     transition: color .5s;
     color: var(--link-color);
     &:hover {
       color: var(--main-color);
+    }
+  }
+
+  .linkarrow{
+    &::after{
+      margin-left: .4em;
+      transition: margin-left .3s ease-in-out;
+      content: "→";
+    }
+    &:hover::after{
+      margin-left: .5em;
     }
   }
 
