@@ -1,7 +1,7 @@
-import "@/lib/reset.css"
+import "@/libs/reset.css"
 import "./globals.scss"
 
-import { body_font, display_font } from '@/lib/fonts'
+import { body_font, display_font } from '@/libs/fonts'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
