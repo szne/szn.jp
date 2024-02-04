@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image';
 import imageSize from "image-size";
-import HelloWorld from '@/libs/getWorks'
+
+import getWorks from '@/libs/getWorks'
 
 import './globals.scss'
 import styles from "./page.module.scss";
 
 export default async function Index() {
-  const works = await HelloWorld
+  const works = await getWorks
   return (
     <>
       <section className={styles.logo}>

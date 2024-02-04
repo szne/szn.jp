@@ -16,7 +16,7 @@ interface Post {
     frontmatter: Frontmatter;
 }
 
-async function HelloWorld() {
+async function getWorks() {
     // contentディレクトリ内のマークダウンファイル一覧を取得
     const postsDirectory: string = path.join(process.cwd(), 'public/works'); // ファイルパスを生成
     const fileNames: string[] = fs.readdirSync(postsDirectory); // ディレクトリ内のファイル名の一覧を取得
@@ -46,4 +46,4 @@ async function HelloWorld() {
     )
 }
 
-export default HelloWorld()
+export default getWorks()
