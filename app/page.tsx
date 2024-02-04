@@ -1,9 +1,13 @@
-import Link from 'next/link';
+import Link from 'next/link'
+import Image from 'next/image';
+import imageSize from "image-size";
+import HelloWorld from '@/libs/getWorks'
 
 import './globals.scss'
 import styles from "./page.module.scss";
 
-export default function Index() {
+export default async function Index() {
+  const works = await HelloWorld
   return (
     <>
       <section className={styles.logo}>
@@ -33,7 +37,32 @@ export default function Index() {
           <Link className='linkarrow' href='about'>もっと知りたい / Explore further</Link>
         </div>
       </section>
-      <section className={styles.works}><h2>Works</h2></section>
+      <section className={styles.works}>
+        <h2>Works</h2>
+        <div>
+          {works.slice(0, 3).map((post) => {
+            const imagePath = post.frontmatter.image?.startsWith("/") ? post.frontmatter.image : ('/works/' + post.frontmatter.image);
+
+            return (
+              <article key={post.slug}>
+                <p>{post.frontmatter.date}</p>
+                <Link href={`/blog/${post.slug}`}>
+                  {post.frontmatter.title}
+                </Link>
+                <p>
+                  {post.frontmatter.description}
+                </p>
+                <Image
+                  alt={post.frontmatter.title + "のサムネイル"}
+                  src={imagePath}
+                  height={imageSize('public' + imagePath).height}
+                  width={imageSize('public' + imagePath).width}
+                />
+              </article>
+            );
+          })}
+        </div>
+      </section>
       <section className={styles.contacts}>
         <h2>Contact</h2>
         <p>なにか伝えたいことがありましたらXのDMまでお願いします。</p>
