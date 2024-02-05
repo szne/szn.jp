@@ -46,19 +46,17 @@ export default async function Index() {
 
             return (
               <article key={post.slug}>
-                <p>{post.frontmatter.date}</p>
-                <Link href={`/blog/${post.slug}`}>
+                <Link href={`/works/${post.slug}`}>
+
+                  <Image
+                    alt={post.frontmatter.title + "のサムネイル"}
+                    src={imagePath}
+                    height={imageSize('public' + imagePath).height}
+                    width={imageSize('public' + imagePath).width}
+                  />
                   {post.frontmatter.title}
                 </Link>
-                <p>
-                  {post.frontmatter.description}
-                </p>
-                <Image
-                  alt={post.frontmatter.title + "のサムネイル"}
-                  src={imagePath}
-                  height={imageSize('public' + imagePath).height}
-                  width={imageSize('public' + imagePath).width}
-                />
+
               </article>
             );
           })}
