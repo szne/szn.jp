@@ -24,7 +24,7 @@ const Page = () => {
     return (
         <main className={styles.main}>
             <section className={not_found.msg}>
-                <h1>404</h1><RandomMessage />
+                <h3>404</h3><RandomMessage />
             </section>
         </main>
     );

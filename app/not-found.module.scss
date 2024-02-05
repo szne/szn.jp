@@ -5,18 +5,18 @@
     align-items: center;
     justify-content: center;
 
-    h1,
+    h3,
     p {
         display: block;
         padding: 30px;
     }
 
-    h1 {
+    h3 {
         border-right: 2px solid var(--main-color);
     }
     @media screen and (max-width: 764px) {
         flex-direction: column;
-        h1 {
+        h3 {
             border-right: 0px solid var(--main-color);
             border-bottom: 2px solid var(--main-color);;
         }
