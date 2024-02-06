@@ -5,8 +5,9 @@ import imageSize from "image-size";
 import getWorks from '@/libs/getWorks'
 
 import './globals.scss'
-import styles from "./page.module.scss";
 import tile from "@/libs/tile.module.scss";
+import styles from "./page.module.scss";
+
 
 export default async function Index() {
   const works = await getWorks

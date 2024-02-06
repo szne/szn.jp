@@ -4,8 +4,8 @@ import imageSize from "image-size";
 
 import getWorks from '@/libs/getWorks'
 
-import styles from "./page.module.scss";
 import tile from "@/libs/tile.module.scss";
+import styles from "./page.module.scss";
 
 export const metadata = {
     title: 'My works',
