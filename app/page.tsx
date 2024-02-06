@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image';
 import imageSize from "image-size";
 
-import getWorks from '@/libs/getWorks'
+import getWorks from '@/libs/getPosts'
 
 import './globals.scss'
 import tile from "@/libs/tile.module.scss";
