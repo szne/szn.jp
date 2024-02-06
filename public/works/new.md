@@ -1,7 +1,7 @@
 ---
 title: Hello World66
 description: "This is my first blog post!"
-image: "szn-jp/jal.jpg"
+image: "szn-jp/header_with_pic.png"
 date: "2028-06-24"
 ---
 
