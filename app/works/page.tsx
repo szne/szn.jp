@@ -20,7 +20,7 @@ export default async function Page() {
                 {works.map((post) => {
                     const imagePath = post.frontmatter.image?.startsWith("/") ? post.frontmatter.image : ('/works/' + post.frontmatter.image);
                     return (
-                        <article key={tile.slug}>
+                        <article key={post.slug}>
                             <Link href={`/works/${post.slug}`}>
                                 <div className={tile.imgwrap}>
                                     <Image
