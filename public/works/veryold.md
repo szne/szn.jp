@@ -1,8 +1,8 @@
 ---
-title: Hello World2
+title: Hello Worldoooo
 description: "This is my first blog post!"
 image: "szn-jp/header_with_pic.png"
-date: "2024-06-24"
+date: "2015-06-24"
 ---
 
 # 見出し
