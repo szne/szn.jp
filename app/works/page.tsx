@@ -5,6 +5,7 @@ import imageSize from "image-size";
 import getWorks from '@/libs/getWorks'
 
 import styles from "./page.module.scss";
+import tile from "@/libs/tile.module.scss";
 
 export const metadata = {
     title: 'My works',
@@ -15,13 +16,13 @@ export default async function Page() {
     return (
         <section className={styles.works}>
             <h1>Works</h1>
-            <div className={styles.worklist}>
+            <div className={tile.worklist}>
                 {works.map((post) => {
                     const imagePath = post.frontmatter.image?.startsWith("/") ? post.frontmatter.image : ('/works/' + post.frontmatter.image);
                     return (
-                        <article key={post.slug}>
+                        <article key={tile.slug}>
                             <Link href={`/works/${post.slug}`}>
-                                <div className={styles.imgwrap}>
+                                <div className={tile.imgwrap}>
                                     <Image
                                         alt={post.frontmatter.title + "のサムネイル"}
                                         src={imagePath}
@@ -29,7 +30,7 @@ export default async function Page() {
                                         width={imageSize('public' + imagePath).width}
                                     />
                                 </div>
-                                <div className={styles.postinfo}>
+                                <div className={tile.postinfo}>
                                     <p>{post.frontmatter.title}</p>
                                     <span>{post.frontmatter.date}</span>
                                 </div>

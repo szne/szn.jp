@@ -6,6 +6,7 @@ import getWorks from '@/libs/getWorks'
 
 import './globals.scss'
 import styles from "./page.module.scss";
+import tile from "@/libs/tile.module.scss";
 
 export default async function Index() {
   const works = await getWorks
@@ -40,13 +41,13 @@ export default async function Index() {
       </section>
       <section className={styles.works}>
         <h2>Works</h2>
-        <div className={styles.worklist}>
-          {works.slice(0, 3).map((post) => {
+        <div className={tile.worklist}>
+          {works.slice(0, 4).map((post) => {
             const imagePath = post.frontmatter.image?.startsWith("/") ? post.frontmatter.image : ('/works/' + post.frontmatter.image);
             return (
               <article key={post.slug}>
                 <Link href={`/works/${post.slug}`}>
-                  <div className={styles.imgwrap}>
+                  <div className={tile.imgwrap}>
                     <Image
                       alt={post.frontmatter.title + "のサムネイル"}
                       src={imagePath}
@@ -54,7 +55,7 @@ export default async function Index() {
                       width={imageSize('public' + imagePath).width}
                     />
                   </div>
-                  <div className={styles.postinfo}>
+                  <div className={tile.postinfo}>
                     <p>{post.frontmatter.title}</p>
                     <span>{post.frontmatter.date}</span>
                   </div>

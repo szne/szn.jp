@@ -1,0 +1,68 @@
+.worklist {
+    display: flex;
+    flex-wrap: wrap;
+
+    article {
+      width: 25%;
+      padding: 1%;
+      aspect-ratio: 1 / 1;
+
+      a {
+        position: relative;
+
+        .imgwrap {
+          overflow: hidden;
+          border-radius: 7%;
+
+          img {
+            object-fit: cover;
+            object-position: center;
+            aspect-ratio: 1 / 1;
+            transition: filter .5s cubic-bezier(0.200, 0.005, 0.155, 0.910), transform .5s cubic-bezier(0.200, 0.005, 0.155, 0.910);
+            transform: scale(1.1);
+          }
+        }
+
+        .postinfo {
+          padding: .6em 1em;
+          position: absolute;
+          bottom: 5%;
+          right: 5%;
+          background-color: none;
+          transition: background-color .5s cubic-bezier(0.200, 0.005, 0.155, 0.910);
+          text-align: right;
+          line-height: 1.1rem;
+          border-radius: .3em;
+          opacity: .9;
+
+          span {
+            font-size: .5em;
+            padding-right: .1em;
+          }
+
+          p,
+          span {
+            color: var(--text-color);
+            font-weight: 700;
+            transition: opacity .5s cubic-bezier(0.200, 0.005, 0.155, 0.910);
+            opacity: 0;
+          }
+        }
+
+        &:hover {
+          img {
+            filter: blur(2px);
+            transform: scale(1.03);
+          }
+
+          .postinfo {
+            background-color: var(--bg-color);
+
+            p,
+            span {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
