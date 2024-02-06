@@ -66,3 +66,31 @@
         }
       }
     }
+
+    @media screen and (max-width: 764px) {
+
+      article {
+        width: 50%;
+        padding: 1%;
+
+        img {
+          filter: blur(2px);
+          transform: scale(1.03);
+        }
+
+        a {
+          .postinfo {
+            background-color: var(--bg-color);
+
+            p,
+            span {
+              color: var(--text-color);
+              font-weight: 700;
+              opacity: 1;
+            }
+          }
+
+        }
+      }
+    }
+  }
