@@ -40,29 +40,35 @@ export default async function Index() {
       </section>
       <section className={styles.works}>
         <h2>Works</h2>
-        <div>
+        <div className={styles.worklist}>
           {works.slice(0, 3).map((post) => {
             const imagePath = post.frontmatter.image?.startsWith("/") ? post.frontmatter.image : ('/works/' + post.frontmatter.image);
-
             return (
               <article key={post.slug}>
                 <Link href={`/works/${post.slug}`}>
-
-                  <Image
-                    alt={post.frontmatter.title + "のサムネイル"}
-                    src={imagePath}
-                    height={imageSize('public' + imagePath).height}
-                    width={imageSize('public' + imagePath).width}
-                  />
-                  {post.frontmatter.title}
+                  <div className={styles.imgwrap}>
+                    <Image
+                      alt={post.frontmatter.title + "のサムネイル"}
+                      src={imagePath}
+                      height={imageSize('public' + imagePath).height}
+                      width={imageSize('public' + imagePath).width}
+                    />
+                  </div>
+                  <div className={styles.postinfo}>
+                    <p>{post.frontmatter.title}</p>
+                    <span>{post.frontmatter.date}</span>
+                  </div>
                 </Link>
-
               </article>
             );
           })}
         </div>
+        <div className={styles.linkwrap}>
+          <Link className='linkarrow' href='works'>もっと見たい / See more</Link>
+        </div>
+
       </section>
-      <section className={styles.contacts}>
+      <section className={styles.contact}>
         <h2>Contact</h2>
         <p>なにか伝えたいことがありましたらXのDMまでお願いします。</p>
       </section>
