@@ -170,7 +170,7 @@
 
     a {
       margin-right: .1em;
-      transition: margin-right .3s ease-in-out;
+      transition: color .5s, margin-right .3s ease-in-out;
 
       &:hover {
         margin-right: 0;
