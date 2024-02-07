@@ -32,7 +32,16 @@ export default async function Page() {
                                 </div>
                                 <div className={tile.postinfo}>
                                     <p>{post.frontmatter.title}</p>
-                                    <span>{post.frontmatter.date}</span>
+                                    <p>
+                                        {
+                                            post.frontmatter.tags
+                                                .slice(0, 3)
+                                                .map((tags) => {
+                                                    return (<span key={tags} className={tile.tag}>{tags} </span>)
+                                                })
+                                        }
+                                    </p>
+                                    <p><span>{post.frontmatter.date}</span></p>
                                 </div>
                             </Link>
                         </article>

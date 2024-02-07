@@ -6,6 +6,7 @@ import matter from 'gray-matter'; // Markdownファイルのfrontmatterを抽出
 interface Frontmatter {
     title: string
     date: string
+    tags: string[]
     description: string
     image: string
 }
@@ -31,10 +32,19 @@ async function getWorks() {
                 const fileContents: string = fs.readFileSync(filePath, 'utf8'); // ファイルの中身をUTF-8で読み込む
                 const { data } = matter(fileContents); // Markdownファイルのfrontmatterを抽出
 
+                // tagをスペースで分割して配列に変換
+                const tagArray = data.tags ? data.tags.split(" ") : [];
+
                 // slugとfrontmatter(title, date, description)を取得
                 return {
                     slug: fileName.replace('.md', ''),
-                    frontmatter: data as Frontmatter, // 抽出したfrontmatterをFrontmatter型にキャスト
+                    frontmatter: {
+                        title: data.title,
+                        date: data.date,
+                        tags: tagArray,
+                        description: data.description,
+                        image: data.image
+                    } as Frontmatter, // 抽出したfrontmatterをFrontmatter型にキャスト
                 };
             })
     ).then((posts) =>
