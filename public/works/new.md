@@ -24,3 +24,11 @@ This is my first blog post!
 <h1>test</h1>
 
 ![alt text](szn-jp/header_with_pic.png)
+
+縦長画像テスト
+
+![alt text](szn-jp/test.png)
+
+正方形画像テスト
+
+![alt text](szn-jp/header_bsky.png)
