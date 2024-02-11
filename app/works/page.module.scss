@@ -1,0 +1,18 @@
+.works {
+  h1 {
+    padding: 3rem 1rem;
+  }
+
+  div {
+    article {
+      width: 33%;
+    }
+
+    @media screen and (max-width: 764px) {
+
+      article {
+        width: 50%;
+      }
+    }
+  }
+}

@@ -88,6 +88,7 @@
     grid-column: 1 / 5;
     width: 100%;
     border-radius: 50%;
+    box-shadow:  20px 20px 60px var(--shadow-color);
   }
 
   div {
@@ -118,6 +119,7 @@
       a {
         margin-bottom: 0;
         height: 1.7rem;
+
         svg {
           height: 1.5rem;
           width: 3.5rem;
@@ -158,4 +160,28 @@
   }
 }
 
+.works {
+  h2 {
+    padding: 3rem 1rem;
+  }
 
+  .linkwrap {
+    padding: 2rem 1%;
+    text-align: right;
+
+    a {
+      margin-right: .1em;
+      transition: color .5s, margin-right .3s ease-in-out;
+
+      &:hover {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.contact {
+  h2 {
+    padding: 3rem 1rem;
+  }
+}
