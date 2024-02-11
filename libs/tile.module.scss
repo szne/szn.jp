@@ -12,7 +12,8 @@
 
       .imgwrap {
         overflow: hidden;
-        box-shadow:  20px 20px 60px var(--shadow-color);
+        border-radius: 2rem;
+        box-shadow: 20px 20px 60px var(--shadow-color);
 
         img {
           object-fit: cover;
@@ -24,15 +25,15 @@
       }
 
       .postinfo {
-        padding: .6em 1em;
+        padding: .8em 3em;
         position: absolute;
-        bottom: 5%;
-        right: 5%;
+        bottom: 0;
+        right: 0;
         background-color: none;
         transition: background-color .5s cubic-bezier(0.200, 0.005, 0.155, 0.910);
         text-align: right;
-        border-radius: .3em;
-        opacity: .9;
+        border-radius: 2rem 0 1.8rem 0;
+        opacity: .8;
         line-height: 1rem;
 
         span {
@@ -47,7 +48,6 @@
           font-weight: 700;
           transition: opacity .5s cubic-bezier(0.200, 0.005, 0.155, 0.910);
           opacity: 0;
-
         }
       }
 
@@ -105,6 +105,12 @@
               font-size: .5rem;
               font-weight: 600;
             }
+          }
+        }
+
+        &:hover {
+          .postinfo {
+            background-color: #00000000;
           }
         }
 
