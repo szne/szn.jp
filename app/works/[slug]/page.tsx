@@ -8,7 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import imageSize from "image-size";
 
-import "./page.scss";
+import styles from "./page.module.scss";
 
 // URLパラメータの型定義
 interface Params {
@@ -34,15 +34,15 @@ export default async function BlogPost({ params }: { params: { slug: string } })
     // JSX要素を返す
     return (
         <>
-            <div className='titlewrap'>
+            <div className={styles.titlewrap}>
                 <Image
                     alt={title + "のサムネイル"}
                     src={imagePath}
                     height={imageSize('public' + imagePath).height}
                     width={imageSize('public' + imagePath).width}
-                    className='titleimage'
+                    className={styles.titleimage}
                 />
-                <div className='titleinfowrap'>
+                <div className={styles.titleinfowrap}>
                     <h1>{title}</h1>
                     <div>
                         <p><span>{date}</span></p>
@@ -56,7 +56,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                     </div>
                 </div>
             </div>
-            <article>
+            <article className={styles.article}>
                 <Markdown
                     rehypePlugins={[rehypeRaw]}
                     remarkPlugins={[remarkGfm]}
@@ -83,7 +83,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                             return (
                             <>
                                 <Image alt={alt ?? "alt なし"} src={image} height={height ? Number(height) : imageSize('public' + image).height} width={width ? Number(width) : imageSize('public' + image).width} />
-                                {alt && <span className='imagealt'>{alt}</span>}
+                                {alt && <span className={styles.imagealt}>{alt}</span>}
                             </>
                             )
                         }

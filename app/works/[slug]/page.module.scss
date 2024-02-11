@@ -38,7 +38,7 @@
   }
 }
 
-article {
+.article {
   padding: 3rem 1.2rem;
   line-height: 3rem;
 
@@ -59,6 +59,7 @@ article {
     border-radius: 2rem;
     max-height: 65vh;
     width: auto;
+    max-width: 90%;
     margin: 2rem auto 0rem
   }
   .imagealt{
@@ -104,7 +105,7 @@ article {
     }
   }
 
-  article {
+  .article {
     padding: 3rem 1.2rem;
     line-height: 2rem;
 
@@ -128,6 +129,8 @@ article {
     img {
       border-radius: 1rem;
       max-height: 80vh;
+      width: auto;
+      max-width: 90%;
     }
 
   }
