@@ -12,7 +12,7 @@
 
       .imgwrap {
         overflow: hidden;
-        border-radius: 7%;
+        box-shadow:  20px 20px 60px var(--shadow-color);
 
         img {
           object-fit: cover;

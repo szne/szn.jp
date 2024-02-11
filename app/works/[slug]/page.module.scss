@@ -4,6 +4,7 @@
 
   .titleimage {
     border-radius: 2rem 2rem 2rem 2rem;
+    box-shadow: 20px 20px 60px var(--shadow-color);
   }
 
   .titleinfowrap {
@@ -60,7 +61,7 @@
     max-height: 65vh;
     width: auto;
     max-width: 90%;
-    margin: 2rem auto 0rem
+    box-shadow: 20px 20px 60px var(--shadow-color);
   }
   .imagealt{
     display: block;
@@ -75,14 +76,10 @@
 @media screen and (max-width: 764px) {
   .titlewrap {
     .titleimage {
-      border-radius: 1rem;
+      box-shadow: 20px 20px 60px var(--shadow-color);
     }
     .titleinfowrap {
-      position: relative;
-      padding: 1rem 2rem ;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      box-shadow: 20px 20px 60px var(--shadow-color);
   
       h1 {
         align-items: center;
