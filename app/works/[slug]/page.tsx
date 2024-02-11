@@ -8,6 +8,8 @@ import Link from "next/link";
 import Image from "next/image";
 import imageSize from "image-size";
 
+import "./page.scss";
+
 // URLパラメータの型定義
 interface Params {
     slug: string;
@@ -31,42 +33,44 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
     // JSX要素を返す
     return (
-        <main>
+        <>
             <h1>{title}</h1>
-            <Markdown
-                rehypePlugins={[rehypeRaw]}
-                remarkPlugins={[remarkGfm]}
-                components={{
-                    h1: 'h2',
-                    h2: 'h3',
-                    h3: 'h4',
-                    a(props) {
-                        const { href, children } = props
-                        return href?.startsWith("/") ? (
-                            <Link href={href}>{children}</Link>
-                        ) : (
-                            <a href={href} rel="noreferrer" target="_blank">
-                                {children}
-                            </a>
-                        );
-                    },
-                    img(props) {
-                        const { src, alt, width, height } = props
-                        if (!src) return <span>src が指定されていません。</span>;
+            <article>
+                <Markdown
+                    rehypePlugins={[rehypeRaw]}
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                        h1: 'h2',
+                        h2: 'h3',
+                        h3: 'h4',
+                        a(props) {
+                            const { href, children } = props
+                            return href?.startsWith("/") ? (
+                                <Link href={href}>{children}</Link>
+                            ) : (
+                                <a href={href} rel="noreferrer" target="_blank">
+                                    {children}
+                                </a>
+                            );
+                        },
+                        img(props) {
+                            const { src, alt, width, height } = props
+                            if (!src) return <span>src が指定されていません。</span>;
 
-                        const image = src?.startsWith("/") ? src : ('/works/' + src)
+                            const image = src?.startsWith("/") ? src : ('/works/' + src)
 
-                        return (
-                            <Image alt={alt ?? "alt なし"} src={image} height={height ? Number(height) : imageSize('public' + image).height} width={width ? Number(width) : imageSize('public' + image).width} />
-                        )
+                            return (
+                                <Image alt={alt ?? "alt なし"} src={image} height={height ? Number(height) : imageSize('public' + image).height} width={width ? Number(width) : imageSize('public' + image).width} />
+                            )
 
 
-                    }
-                }}
+                        }
+                    }}
 
-            >
-                {content}
-            </Markdown>
-        </main>
+                >
+                    {content}
+                </Markdown>
+            </article>
+        </>
     );
 }

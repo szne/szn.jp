@@ -1,0 +1,24 @@
+h1 {
+  padding: 3rem 1rem 0;
+}
+
+
+article {
+  padding: 3rem 1.2rem;
+  line-height: 3rem;
+
+  h2,h3,h4,h5,h6{
+    line-height: 4rem;
+  }
+  h2{
+    font-family: var(--body-font);
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 764px) {
+
+  article {
+    width: 50%;
+  }
+}
