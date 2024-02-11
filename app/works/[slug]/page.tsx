@@ -81,7 +81,10 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                             const image = src?.startsWith("/") ? src : ('/works/' + src)
 
                             return (
+                            <>
                                 <Image alt={alt ?? "alt なし"} src={image} height={height ? Number(height) : imageSize('public' + image).height} width={width ? Number(width) : imageSize('public' + image).width} />
+                                {alt && <span className='imagealt'>{alt}</span>}
+                            </>
                             )
                         }
                     }}

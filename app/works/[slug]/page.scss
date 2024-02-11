@@ -59,7 +59,15 @@ article {
     border-radius: 2rem;
     max-height: 65vh;
     width: auto;
-    margin: 2rem auto
+    margin: 2rem auto 0rem
+  }
+  .imagealt{
+    display: block;
+    text-align: center;
+    margin: 0 0 2rem;
+    font-size: 0.85em;
+    letter-spacing: 0.2em;
+    font-weight: 500;
   }
 }
 
@@ -120,7 +128,7 @@ article {
     img {
       border-radius: 1rem;
       max-height: 80vh;
-      
     }
+
   }
 }
