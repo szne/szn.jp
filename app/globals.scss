@@ -14,7 +14,8 @@ body {
   h3,
   p,
   a,
-  span {
+  span,
+  li {
     letter-spacing: .1em;
     color: var(--text-color);
   }
@@ -37,7 +38,7 @@ body {
 
   // 本文
 
-  p {
+  p, li {
     font-weight: 500;
   }
 
@@ -53,6 +54,15 @@ body {
     }
   }
 
+  li{
+    margin-left: 1rem;
+    padding-left: .5rem;
+    list-style: none;
+    &::marker{
+      content: "-";
+    }
+  }
+
   @media screen and (max-width: 764px) {
 
     h1,
@@ -62,7 +72,8 @@ body {
 
     p,
     a,
-    span {
+    span,
+    li {
       line-break: strict;
       font-size: .8em;
     }
