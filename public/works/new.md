@@ -3,7 +3,7 @@ title: Hello World66
 description: "This is my first blog post!"
 image: "szn-jp/header_with_pic.png"
 date: "2028-06-24"
-tags: "#test #test2"
+tags: "#design #web #movie #3DCG"
 ---
 
 # 見出し

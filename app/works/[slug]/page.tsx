@@ -30,11 +30,32 @@ export default async function BlogPost({ params }: { params: { slug: string } })
     const date = data.date
     const tags = data.tags ? data.tags.split(" ") : [];
     const image = data.image
-
+    const imagePath = image?.startsWith("/") ? image : ('/works/' + image);
     // JSX要素を返す
     return (
         <>
-            <h1>{title}</h1>
+            <div className='titlewrap'>
+                <Image
+                    alt={title + "のサムネイル"}
+                    src={imagePath}
+                    height={imageSize('public' + imagePath).height}
+                    width={imageSize('public' + imagePath).width}
+                    className='titleimage'
+                />
+                <div className='titleinfowrap'>
+                    <h1>{title}</h1>
+                    <div>
+                        <p><span>{date}</span></p>
+                        <p>
+                            {
+                                tags.map((tags: string) => {
+                                    return (<span key={tags}>{tags} </span>)
+                                })
+                            }
+                        </p>
+                    </div>
+                </div>
+            </div>
             <article>
                 <Markdown
                     rehypePlugins={[rehypeRaw]}
@@ -62,8 +83,6 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                             return (
                                 <Image alt={alt ?? "alt なし"} src={image} height={height ? Number(height) : imageSize('public' + image).height} width={width ? Number(width) : imageSize('public' + image).width} />
                             )
-
-
                         }
                     }}
 
