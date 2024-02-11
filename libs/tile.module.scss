@@ -47,7 +47,7 @@
           font-weight: 700;
           transition: opacity .5s cubic-bezier(0.200, 0.005, 0.155, 0.910);
           opacity: 0;
-          
+
         }
       }
 
@@ -74,20 +74,24 @@
     article {
       width: 50%;
       padding: 1%;
+
       .imgwrap {
         overflow: hidden;
         border-radius: 7%;
-      img {
-        transform: scale(1.03);
+
+        img {
+          transform: scale(1.03);
+        }
       }
-    }
+
       a {
         .postinfo {
           bottom: 0;
           right: 0;
           position: relative;
           text-align: center;
-          span{
+
+          span {
             font-size: .5em;
             opacity: 1;
           }
@@ -96,7 +100,8 @@
             color: var(--text-color);
             font-weight: 700;
             opacity: 1;
-            span{
+
+            span {
               font-size: .5rem;
               font-weight: 600;
             }
