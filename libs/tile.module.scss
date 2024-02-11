@@ -74,11 +74,13 @@
     article {
       width: 50%;
       padding: 1%;
-
+      .imgwrap {
+        overflow: hidden;
+        border-radius: 7%;
       img {
         transform: scale(1.03);
       }
-
+    }
       a {
         .postinfo {
           bottom: 0;
