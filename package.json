@@ -17,6 +17,7 @@
     "printWidth": 100
   },
   "dependencies": {
+    "@funtech-inc/mekuri": "^3.1.17",
     "eslint-config-prettier": "^9.1.0",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
