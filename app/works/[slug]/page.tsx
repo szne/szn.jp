@@ -9,6 +9,7 @@ import Image from "next/image";
 import imageSize from "image-size";
 
 import styles from "./page.module.scss";
+import contentstyle from "@/components/content.module.scss"
 
 // URLパラメータの型定義
 interface Params {
@@ -56,7 +57,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                     </div>
                 </div>
             </div>
-            <article className={styles.article}>
+            <article className={contentstyle.content}>
                 <Markdown
                     rehypePlugins={[rehypeRaw]}
                     remarkPlugins={[remarkGfm]}
@@ -83,7 +84,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                             return (
                             <>
                                 <Image alt={alt ?? "alt なし"} src={image} height={height ? Number(height) : imageSize('public' + image).height} width={width ? Number(width) : imageSize('public' + image).width} />
-                                {alt && <span className={styles.imagealt}>{alt}</span>}
+                                {alt && <span className={contentstyle.imagealt}>{alt}</span>}
                             </>
                             )
                         }

@@ -21,13 +21,13 @@ body {
   }
 
   // 見出し
-  h1,
-  h2 {
+  h1 {
     font-family: var(--display-font);
     font-weight: 700;
   }
 
   h2 {
+    font-weight: 700;
     font-size: 2rem;
   }
 
@@ -40,11 +40,13 @@ body {
 
   p, li {
     font-weight: 500;
+    font-size: .9rem;
   }
 
   a {
     letter-spacing: .15em;
     font-weight: 700;
+    font-size: .9rem;
     text-decoration: none;
     transition: color .5s;
     color: var(--link-color);
