@@ -56,7 +56,7 @@ export default async function Index() {
           </div>
           <p>いろいろなことを少しずつやっています。</p>
           <p>I'm dabbling in various things and exploring a range of skills bit by bit.</p>
-          <Link className='linkarrow' href='about'>
+          <Link className='linkarrow' href='about' scroll={false}>
             もっと知りたい / Explore further
           </Link>
         </div>
@@ -70,7 +70,7 @@ export default async function Index() {
               : '/works/' + post.frontmatter.image
             return (
               <article key={post.slug}>
-                <Link href={`/works/${post.slug}`}>
+                <Link href={`/works/${post.slug}`} scroll={false}>
                   <div className={tile.imgwrap}>
                     <Image
                       alt={post.frontmatter.title + 'のサムネイル'}
@@ -89,7 +89,7 @@ export default async function Index() {
           })}
         </div>
         <div className={styles.linkwrap}>
-          <Link className='linkarrow' href='works'>
+          <Link className='linkarrow' href='works' scroll={false}>
             もっと見たい / See more
           </Link>
         </div>

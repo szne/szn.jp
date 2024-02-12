@@ -19,10 +19,10 @@ const Header = () => {
         </Link>
         <ul>
           <li>
-            <Link href='/about'>About</Link>
+            <Link href='/about' scroll={false}>About</Link>
           </li>
           <li>
-            <Link href='/works'>Works</Link>
+            <Link href='/works' scroll={false}>Works</Link>
           </li>
         </ul>
       </nav>
