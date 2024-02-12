@@ -1,0 +1,107 @@
+.content {
+    padding: 3rem 3rem;
+    line-height: 2.5rem;
+    width: 90%;
+    margin: auto;
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        line-height: 5rem;
+    }
+
+    h2 {
+        font-family: var(--body-font);
+        font-size: 1.4rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+
+    p {
+        padding: .8rem .5rem;
+        word-break: keep-all;
+        font-size: .9rem;
+    }
+
+    hr {
+        width: calc(100% - .5rem);
+        margin: 1rem auto;
+        border: 1px solid var(--text-color);
+        opacity: 0.3;
+    }
+
+    img {
+        border-radius: 2rem;
+        max-height: 45vh;
+        width: auto;
+        max-width: 90%;
+        margin: 2rem auto 0rem;
+        box-shadow: 20px 20px 60px var(--shadow-color);
+    }
+
+    .imagealt {
+        display: block;
+        text-align: center;
+        margin: 0 0 2rem;
+        font-size: 0.85em;
+        letter-spacing: 0.2em;
+        font-weight: 500;
+    }
+
+    @media screen and (max-width: 764px) {
+        padding: 3rem 1rem;
+        line-height: 2rem;
+        width: 95%;
+        margin: auto;
+    
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          line-height: 3rem;
+        }
+    
+        h2 {
+          font-family: var(--body-font);
+          font-size: 1.1rem;
+        }
+        h3 {
+          font-size: .9rem;
+        }
+    
+        p {
+          padding: .5rem .5rem;
+          word-break:normal;
+          font-size: .7rem;
+        }
+    
+        hr {
+          width: calc(100% - .5rem);
+          margin: 1rem auto;
+          border: 1px solid var(--text-color);
+          opacity: 0.3;
+        }
+    
+        img {
+          border-radius: 1rem;
+          max-height: 45vh;
+          width: auto;
+          max-width: 90%;
+          margin: 2rem auto 0rem;
+          box-shadow: 20px 20px 60px var(--shadow-color);
+        }
+    
+        .imagealt {
+          display: block;
+          text-align: center;
+          margin: 0 0 2rem;
+          font-size: 0.85em;
+          letter-spacing: 0.2em;
+          font-weight: 500;
+        }
+    }
+}
