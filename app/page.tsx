@@ -71,11 +71,6 @@ export default async function Index() {
         <div className={styles.linkwrap}>
           <Link className='linkarrow' href='works'>もっと見たい / See more</Link>
         </div>
-
-      </section>
-      <section className={styles.contact}>
-        <h2>Contact</h2>
-        <p>なにか伝えたいことがありましたらXのDMまでお願いします。</p>
       </section>
     </>
   );
