@@ -86,7 +86,7 @@ export default async function BlogPost({
 
               return (
                 <>
-                  <Image
+                  <img
                     alt={alt ?? 'alt なし'}
                     src={image}
                     height={height ? Number(height) : imageSize('public' + image).height}
