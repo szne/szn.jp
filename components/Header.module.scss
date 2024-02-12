@@ -1,52 +1,51 @@
 .header {
-    height: 5em;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    nav {
-        @media screen and (min-width: 765px) {
-            min-width: 765px;
-            width: 55%;
-        }
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1.2em 1em;
-
-        svg {
-            width: 2em;
-            height: 2em;
-            cursor: pointer;
-            stroke: var(--text-color);
-            stroke-width: 36px;
-            transition: stroke .3s;
-
-            &:hover {
-                stroke: var(--main-color);
-            }
-        }
-
-
-        ul {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            li {
-                display: inline-block;
-                padding: 10px 20px;
-
-                @media screen and (max-width: 764px) {
-                    font-size: .9em;
-                    padding: 10px .6em;
-                }
-
-                a {
-                    text-decoration: none;
-                    font-family: var(--display-font);
-                }
-            }
-        }
+  height: 5em;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  nav {
+    @media screen and (min-width: 765px) {
+      min-width: 765px;
+      width: 55%;
     }
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2em 1em;
+
+    svg {
+      width: 2em;
+      height: 2em;
+      cursor: pointer;
+      stroke: var(--text-color);
+      stroke-width: 36px;
+      transition: stroke 0.3s;
+
+      &:hover {
+        stroke: var(--main-color);
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        display: inline-block;
+        padding: 10px 20px;
+
+        @media screen and (max-width: 764px) {
+          font-size: 0.9em;
+          padding: 10px 0.6em;
+        }
+
+        a {
+          text-decoration: none;
+          font-family: var(--display-font);
+        }
+      }
+    }
+  }
 }
