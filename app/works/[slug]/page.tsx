@@ -78,24 +78,24 @@ export default async function BlogPost({
                 </a>
               )
             },
-            img(props) {
-              const { src, alt, width, height } = props
-              if (!src) return <span>src が指定されていません。</span>
+            // img(props) {
+            //   const { src, alt, width, height } = props
+            //   if (!src) return <span>src が指定されていません。</span>
 
-              const image = src?.startsWith('/') ? src : '/works/' + src
+            //   const image = src?.startsWith('/') ? src : '/works/' + src
 
-              return (
-                <>
-                  <img
-                    alt={alt ?? 'alt なし'}
-                    src={image}
-                    height={height ? Number(height) : imageSize('public' + image).height}
-                    width={width ? Number(width) : imageSize('public' + image).width}
-                  />
-                  {alt && <span className={contentstyle.imagealt}>{alt}</span>}
-                </>
-              )
-            },
+            //   return (
+            //     <>
+            //       <img
+            //         alt={alt ?? 'alt なし'}
+            //         src={image}
+            //         height={height ? Number(height) : imageSize('public' + image).height}
+            //         width={width ? Number(width) : imageSize('public' + image).width}
+            //       />
+            //       {alt && <span className={contentstyle.imagealt}>{alt}</span>}
+            //     </>
+            //   )
+            // },
           }}
         >
           {content}
