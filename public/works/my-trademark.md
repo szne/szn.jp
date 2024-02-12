@@ -1,9 +1,9 @@
 ---
 title: "szne's logo"
-description: "szne のロゴ（2代目）です。"
-image: "my-trademark/V3_logo.png"
-date: "2024-02-02"
-tags: "#design"
+description: 'szne のロゴ（2代目）です。'
+image: 'my-trademark/V3_logo.png'
+date: '2024-02-02'
+tags: '#design'
 ---
 
 szne のロゴ（3代目）です。
@@ -37,7 +37,6 @@ szne のロゴ（3代目）です。
 2代目のロゴには満足していましたが、これではアイコンとロゴの連続性が失われてしまいます。また、デザインした年代の違いからか、どうしても各文字のとげとげしさが異なっているように感じました。
 
 そこで、sの部分をアイコンを模して作成し、"zne"部分と結合して3代目のロゴが完成しました。
-
 
 # Gallery
 

@@ -14,8 +14,8 @@
     stroke: var(--main-color);
     stroke-width: 30px;
     stroke-dasharray: 5920;
-    -webkit-animation: hello 5s cubic-bezier(0.310, 0.005, 0.000, 1.000);
-    animation: hello 5s cubic-bezier(0.310, 0.005, 0.000, 1.000);
+    -webkit-animation: hello 5s cubic-bezier(0.31, 0.005, 0, 1);
+    animation: hello 5s cubic-bezier(0.31, 0.005, 0, 1);
 
     @keyframes hello {
       0% {
@@ -34,7 +34,9 @@
     background: var(--main-color);
     margin: 0 auto;
 
-    animation: scroll_delay 5s, scrollDown 2s cubic-bezier(.6, 0, 0, .6) 5s infinite;
+    animation:
+      scroll_delay 5s,
+      scrollDown 2s cubic-bezier(0.6, 0, 0, 0.6) 5s infinite;
 
     @keyframes scroll_delay {
       0% {
@@ -89,7 +91,7 @@
     grid-column: 1 / 5;
     width: 100%;
     border-radius: 50%;
-    box-shadow:  20px 20px 60px var(--shadow-color);
+    box-shadow: 20px 20px 60px var(--shadow-color);
   }
 
   div {
@@ -107,7 +109,7 @@
 
     .name {
       width: 100%;
-      border-bottom: .3em solid var(--main-color);
+      border-bottom: 0.3em solid var(--main-color);
       display: flex;
       flex-direction: row;
       align-items: flex-end;
@@ -126,7 +128,7 @@
           width: 3.5rem;
           margin-top: auto;
           stroke-width: 0px;
-          transition: fill .5s;
+          transition: fill 0.5s;
           fill: var(--text-color);
 
           &:hover {
@@ -138,7 +140,6 @@
   }
 
   @media screen and (max-width: 764px) {
-
     img {
       grid-column: 2 / 12;
     }
@@ -171,8 +172,10 @@
     text-align: right;
 
     a {
-      margin-right: .1em;
-      transition: color .5s, margin-right .3s ease-in-out;
+      margin-right: 0.1em;
+      transition:
+        color 0.5s,
+        margin-right 0.3s ease-in-out;
 
       &:hover {
         margin-right: 0;

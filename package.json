@@ -8,13 +8,22 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "printWidth": 100
+  },
   "dependencies": {
-    "next/font": "^14.1.0",
+    "eslint-config-prettier": "^9.1.0",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "image-size": "^1.1.1",
     "next": "^14.1.0",
     "path": "^0.12.7",
+    "prettier": "^3.2.5",
     "react": "^18.2.0",
     "react-markdown": "^9.0.1",
     "rehype-raw": "^7.0.0",

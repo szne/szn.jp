@@ -1,24 +1,24 @@
 .msg {
-    padding: 2em;
-    height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 2em;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    h3,
-    p {
-        display: block;
-        padding: 30px;
-    }
+  h3,
+  p {
+    display: block;
+    padding: 30px;
+  }
 
+  h3 {
+    border-right: 2px solid var(--main-color);
+  }
+  @media screen and (max-width: 764px) {
+    flex-direction: column;
     h3 {
-        border-right: 2px solid var(--main-color);
+      border-right: 0px solid var(--main-color);
+      border-bottom: 2px solid var(--main-color);
     }
-    @media screen and (max-width: 764px) {
-        flex-direction: column;
-        h3 {
-            border-right: 0px solid var(--main-color);
-            border-bottom: 2px solid var(--main-color);;
-        }
-    }
+  }
 }
