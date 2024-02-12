@@ -21,6 +21,7 @@
     "eslint-config-prettier": "^9.1.0",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
+    "gsap": "^3.12.5",
     "image-size": "^1.1.1",
     "next": "^14.1.0",
     "path": "^0.12.7",
