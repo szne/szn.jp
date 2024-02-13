@@ -34,14 +34,7 @@ export default async function BlogPost({
   const date = data.date
   const tags = data.tags ? data.tags.split(' ') : []
   const image = data.image
-  const imagePath =
-    process.env.NODE_ENV === 'development'
-      ? image?.startsWith('/')
-        ? image
-        : '/works/' + image
-      : image?.startsWith('/')
-        ? path.join(process.cwd(), image)
-        : path.join(process.cwd(), '/works/', image)
+  const imagePath = image?.startsWith('/') ? image : '/works/' + image
   // JSX要素を返す
   return (
     <>
