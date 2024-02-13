@@ -45,6 +45,7 @@ export default async function BlogPost({
           height={imageSize('public' + imagePath).height}
           width={imageSize('public' + imagePath).width}
           className={styles.titleimage}
+          loading="lazy"
         />
         <div className={styles.titleinfowrap}>
           <h1>{title}</h1>
@@ -91,6 +92,7 @@ export default async function BlogPost({
                     src={image}
                     height={height ? Number(height) : imageSize('public' + image).height}
                     width={width ? Number(width) : imageSize('public' + image).width}
+                    loading="lazy"
                   />
                   {alt && <span className={contentstyle.imagealt}>{alt}</span>}
                 </>
