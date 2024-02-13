@@ -89,14 +89,7 @@ export default async function BlogPost({
               const { src, alt, width, height } = props
               if (!src) return <span>src が指定されていません。</span>
 
-              const image =
-                process.env.NODE_ENV === 'development'
-                  ? src?.startsWith('/')
-                    ? src
-                    : '/works/' + src
-                  : src?.startsWith('/')
-                    ? path.join(process.cwd(), src)
-                    : path.join(process.cwd(), '/works/', src)
+              const image = src?.startsWith('/') ? src : '/works/' + src
 
               return (
                 <>
