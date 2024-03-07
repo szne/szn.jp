@@ -11,9 +11,18 @@ import imageSize from 'image-size'
 import styles from './page.module.scss'
 import contentstyle from '@/components/content.module.scss'
 
-// URLパラメータの型定義
-interface Params {
-  slug: string
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const { slug } = params
+  const filePath = path.join(process.cwd(), 'public/works', `${slug}.md`) // ファイルの絶対パスを生成
+
+  // ファイルの中身を取得
+  const fileContents = fs.readFileSync(filePath, 'utf8') // ファイルの中身をUTF-8で読み込む
+  const { data} = matter(fileContents) // Markdownファイルのfrontmatterと本文を抽出
+
+  const title = data.title // 記事のタイトル
+  return {
+    title: title,
+  }
 }
 
 // 非同期関数としてのBlogPostコンポーネント
@@ -22,7 +31,6 @@ export default async function BlogPost({
 }: {
   params: { slug: string }
 }): Promise<JSX.Element> {
-  // URLのパラメータから該当するファイル名を取得 (今回は hello-world)
   const { slug } = params
   const filePath = path.join(process.cwd(), 'public/works', `${slug}.md`) // ファイルの絶対パスを生成
 
@@ -34,16 +42,17 @@ export default async function BlogPost({
   const date = data.date
   const tags = data.tags ? data.tags.split(' ') : []
   const image = data.image
-  const imagePath = (process.env.NODE_ENV === 'development' ? (image?.startsWith('/') ? image : '/works/' + image) : (image))
+  const imagePath =
+    process.env.NODE_ENV === 'development'
+      ? image?.startsWith('/')
+        ? image
+        : '/works/' + image
+      : image
   // JSX要素を返す
   return (
     <>
       <div className={styles.titlewrap}>
-        <img
-          alt={title + 'のサムネイル'}
-          src={imagePath}
-          className={styles.titleimage}
-        />
+        <img alt={title + 'のサムネイル'} src={imagePath} className={styles.titleimage} />
         <div className={styles.titleinfowrap}>
           <h1>{title}</h1>
           <div>
@@ -80,7 +89,12 @@ export default async function BlogPost({
               const { src, alt, width, height } = props
               if (!src) return <span>src が指定されていません。</span>
 
-              const image = (process.env.NODE_ENV === 'development' ? (src?.startsWith('/') ? src : '/works/' + src) : src)
+              const image =
+                process.env.NODE_ENV === 'development'
+                  ? src?.startsWith('/')
+                    ? src
+                    : '/works/' + src
+                  : src
 
               return (
                 <>
