@@ -39,13 +39,12 @@ export default async function BlogPost({
   return (
     <>
       <div className={styles.titlewrap}>
-        <Image
+        <img
           alt={title + 'のサムネイル'}
           src={imagePath}
           height={imageSize('public' + imagePath).height}
           width={imageSize('public' + imagePath).width}
           className={styles.titleimage}
-          loading="lazy"
         />
         <div className={styles.titleinfowrap}>
           <h1>{title}</h1>
@@ -87,12 +86,11 @@ export default async function BlogPost({
 
               return (
                 <>
-                  <Image
+                  <img
                     alt={alt ?? 'alt なし'}
                     src={image}
                     height={height ? Number(height) : imageSize('public' + image).height}
                     width={width ? Number(width) : imageSize('public' + image).width}
-                    loading="lazy"
                   />
                   {alt && <span className={contentstyle.imagealt}>{alt}</span>}
                 </>
