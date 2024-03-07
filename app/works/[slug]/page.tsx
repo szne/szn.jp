@@ -42,8 +42,10 @@ export default async function BlogPost({
         <img
           alt={title + 'のサムネイル'}
           src={imagePath}
-          height={imageSize('public' + imagePath).height}
-          width={imageSize('public' + imagePath).width}
+          height={
+            imageSize(process.env.NODE_ENV === 'development' ? 'public' + imagePath : imagePath).height
+          }
+          width={imageSize(process.env.NODE_ENV === 'development' ? 'public' + imagePath : imagePath).width}
           className={styles.titleimage}
         />
         <div className={styles.titleinfowrap}>
@@ -89,8 +91,8 @@ export default async function BlogPost({
                   <img
                     alt={alt ?? 'alt なし'}
                     src={image}
-                    height={height ? Number(height) : imageSize('public' + image).height}
-                    width={width ? Number(width) : imageSize('public' + image).width}
+                    height={height ? Number(height) : imageSize(process.env.NODE_ENV === 'development' ? 'public' + imagePath : imagePath).height}
+                    width={width ? Number(width) : imageSize(process.env.NODE_ENV === 'development' ? 'public' + imagePath : imagePath).width}
                   />
                   {alt && <span className={contentstyle.imagealt}>{alt}</span>}
                 </>
