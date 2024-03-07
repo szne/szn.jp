@@ -34,7 +34,7 @@ export default async function BlogPost({
   const date = data.date
   const tags = data.tags ? data.tags.split(' ') : []
   const image = data.image
-  const imagePath = image?.startsWith('/') ? image : 'works/' + image
+  const imagePath = (process.env.NODE_ENV === 'development' ? (image?.startsWith('/') ? image : '/works/' + image) : (image))
   // JSX要素を返す
   return (
     <>
@@ -76,24 +76,24 @@ export default async function BlogPost({
                 </a>
               )
             },
-            // img(props) {
-            //   const { src, alt, width, height } = props
-            //   if (!src) return <span>src が指定されていません。</span>
+            img(props) {
+              const { src, alt, width, height } = props
+              if (!src) return <span>src が指定されていません。</span>
 
-            //   const image = src?.startsWith('/') ? src : '/works/' + src
+              const image = (process.env.NODE_ENV === 'development' ? (src?.startsWith('/') ? src : '/works/' + src) : src)
 
-            //   return (
-            //     <>
-            //       {/* <img
-            //         alt={alt ?? 'alt なし'}
-            //         src={image}
-            //         height={height ? Number(height) : imageSize(process.env.NODE_ENV === 'development' ? 'public' + imagePath : imagePath).height}
-            //         width={width ? Number(width) : imageSize(process.env.NODE_ENV === 'development' ? 'public' + imagePath : imagePath).width}
-            //       /> */}
-            //       {alt && <span className={contentstyle.imagealt}>{alt}</span>}
-            //     </>
-            //   )
-            // },
+              return (
+                <>
+                  <img
+                    alt={alt ?? 'alt なし'}
+                    src={image}
+                    // height={height ? Number(height) : imageSize(process.env.NODE_ENV === 'development' ? 'public' + imagePath : imagePath).height}
+                    // width={width ? Number(width) : imageSize(process.env.NODE_ENV === 'development' ? 'public' + imagePath : imagePath).width}
+                  />
+                  {alt && <span className={contentstyle.imagealt}>{alt}</span>}
+                </>
+              )
+            },
           }}
         >
           {content}
