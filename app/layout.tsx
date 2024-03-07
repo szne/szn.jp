@@ -7,10 +7,32 @@ import { body_font, display_font } from '@/libs/fonts'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
+const siteName= 'szne';
+const description = 'szne\'s portfolio';
+const url = 'https://szn.jp';
+
 export const metadata = {
   title: {
-    default: 'szne',
-    template: '%s | szne',
+    default: siteName,
+    template: `%s | ${siteName}`,
+  },
+  description,
+  openGraph: {
+    title: siteName,
+    description,
+    url,
+    siteName,
+    locale: 'ja_JP',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteName,
+    description,
+    creator: '@szneh',
+  },
+  alternates: {
+    canonical: url,
   },
 }
 
