@@ -39,7 +39,7 @@ export default async function BlogPost({
   return (
     <>
       <div className={styles.titlewrap}>
-        {/* <img
+        <img
           alt={title + 'のサムネイル'}
           src={imagePath}
           height={
@@ -47,7 +47,7 @@ export default async function BlogPost({
           }
           width={imageSize(process.env.NODE_ENV === 'development' ? 'public' + imagePath : imagePath).width}
           className={styles.titleimage}
-        /> */}
+        />
         <div className={styles.titleinfowrap}>
           <h1>{title}</h1>
           <div>
@@ -80,24 +80,24 @@ export default async function BlogPost({
                 </a>
               )
             },
-            img(props) {
-              const { src, alt, width, height } = props
-              if (!src) return <span>src が指定されていません。</span>
+            // img(props) {
+            //   const { src, alt, width, height } = props
+            //   if (!src) return <span>src が指定されていません。</span>
 
-              const image = src?.startsWith('/') ? src : '/works/' + src
+            //   const image = src?.startsWith('/') ? src : '/works/' + src
 
-              return (
-                <>
-                  {/* <img
-                    alt={alt ?? 'alt なし'}
-                    src={image}
-                    height={height ? Number(height) : imageSize(process.env.NODE_ENV === 'development' ? 'public' + imagePath : imagePath).height}
-                    width={width ? Number(width) : imageSize(process.env.NODE_ENV === 'development' ? 'public' + imagePath : imagePath).width}
-                  /> */}
-                  {alt && <span className={contentstyle.imagealt}>{alt}</span>}
-                </>
-              )
-            },
+            //   return (
+            //     <>
+            //       {/* <img
+            //         alt={alt ?? 'alt なし'}
+            //         src={image}
+            //         height={height ? Number(height) : imageSize(process.env.NODE_ENV === 'development' ? 'public' + imagePath : imagePath).height}
+            //         width={width ? Number(width) : imageSize(process.env.NODE_ENV === 'development' ? 'public' + imagePath : imagePath).width}
+            //       /> */}
+            //       {alt && <span className={contentstyle.imagealt}>{alt}</span>}
+            //     </>
+            //   )
+            // },
           }}
         >
           {content}
