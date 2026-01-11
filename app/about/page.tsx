@@ -18,19 +18,10 @@ export default async function Page() {
         <p>
           はじめまして、szneと申します。デザイン、フロントエンド開発、映像作成を少しだけ経験しています。Illustratorを使って簡単なロゴデザインを作成するのが得意です。
         </p>
-        <p>
-          まだまだ経験が浅く、学ぶことが多いと感じていますが、その分、謙虚さと向上心を持って取り組んでいます。デザインや開発の世界は広く、日々新しい技術やアイデアが生まれています。その中で、自分のスキルを磨きながら、常に新しいことに挑戦することが私の目標です。
-        </p>
         <hr />
         <p>
           Hello, I'm szne. I have some experience in design, front-end development, and video
           creation. I specialize in creating simple logo designs using Illustrator.
-        </p>
-        <p>
-          I still have a lot to learn and feel that my experience is somewhat limited. However, I
-          approach my work with humility and a desire to improve. The fields of design and
-          development are vast, with new technologies and ideas emerging daily. My goal is to
-          continually refine my skills and embrace new challenges as they arise.
         </p>
         <h2>Links and contacts</h2>
         <ul>
@@ -45,8 +36,8 @@ export default async function Page() {
             </a>
           </li>
           <li>
-            <a href='https://x.com/szneh' target='_blank' rel='noopener noreferrer'>
-              X: @szneh
+            <a href='https://x.com/szn_jp' target='_blank' rel='noopener noreferrer'>
+              X: @szn_jp
             </a>
           </li>
           <li>
@@ -54,11 +45,11 @@ export default async function Page() {
               Bluesky: @szn.jp
             </a>
           </li>
-          <li>Mail: hi@szn.jp (あまり見ないです)</li>
+          <li>Mail: hi@szn.jp (見ないです)</li>
         </ul>
         <h2>Tips</h2>
         <p>
-          名前について：短いドメインにあこがれて取得した"szn.jp"が由来です。特に読み方は考えていませんが、自分はよく「すずね」と呼んでいます。全部小文字なので、たまに名前を打っていてすこし嫌な感じがします。
+          名前について：短いドメインに憧れて取得した"szn.jp"が由来です。特に読み方は考えていませんが、自分はよく「すずね」と呼んでいます。全部小文字なので、名前を打っていてたまに嫌な感じがします。
         </p>
       </div>
     </section>

@@ -41,7 +41,7 @@ export default async function Index() {
                 <path d='M.264 23.771h4.984c.264 0 .498-.147.645-.352L19.614.874c.176-.293-.029-.645-.381-.645h-4.72c-.235 0-.44.117-.557.323L.03 23.361c-.088.176.029.41.234.41zM17.445 23.419l6.479-10.408c.205-.323-.029-.733-.41-.733h-4.691c-.176 0-.352.088-.44.235l-6.655 10.643c-.176.264.029.616.352.616h4.779c.234-.001.468-.118.586-.353z' />
               </svg>
             </a>
-            <a href='https://x.com/szneh' target='_blank' rel='noopener noreferrer'>
+            <a href='https://x.com/szn_jp' target='_blank' rel='noopener noreferrer'>
               <svg role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                 <title>X</title>
                 <path d='M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z' />
@@ -61,7 +61,7 @@ export default async function Index() {
           </Link>
         </div>
       </section>
-      <section className={styles.works}>
+      {/* <section className={styles.works}>
         <h2>Works</h2>
         <div className={tile.worklist}>
           {works.slice(0, 4).map((post) => {
@@ -93,7 +93,7 @@ export default async function Index() {
             もっと見たい / See more
           </Link>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }
